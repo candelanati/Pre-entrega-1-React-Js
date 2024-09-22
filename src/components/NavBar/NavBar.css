@@ -3,8 +3,10 @@ nav {
     top: 0px;
     background-color: transparent;
     width: 100%;
-    margin-top: 20px;
-
+    padding-top: 20px;
+    padding-bottom: 10px;
+    backdrop-filter: blur(10px);
+    background-color: #d9d9d9af;
 }
 ul{
     list-style: none outside none;
@@ -51,12 +53,12 @@ ul{
 
     margin-top: 10px;
 }
-.dropdown > a{
+.dropdown > button{
     padding-right: 5px;
     padding-left: 20px;
 
 }
-.dropdown > a:hover{
+.dropdown > button:hover{
     text-decoration: underline 1px;
     text-underline-offset: 4px;
 

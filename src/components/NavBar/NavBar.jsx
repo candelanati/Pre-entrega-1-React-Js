@@ -1,5 +1,7 @@
-import { Children, useState } from 'react'
+import { children, useState } from 'react'
 import './NavBar.css'
+import Ticket  from '../Ticket/Ticket';
+import ButtonNav from '../ButtonNav/ButtonNav';
 
 function NavBar() {
     return (
@@ -15,6 +17,9 @@ function NavBar() {
                     <Dropdown options={['poster','cuadro']}>presentación</Dropdown>
                 </li>
             </ul>
+            <div>
+                <Ticket/>
+            </div>
 
         </nav>
     )
@@ -30,9 +35,11 @@ function Dropdown({ children, options = [] }) {
             </button>
             <div className={`dropdown ${open ? 'mostrar' : 'esconder'}`}>
                 {options.map((option, key) => (
-                    <a key={key} href="#" className="dropdown-option">
-                        {option}
-                    </a>
+                    // <a key={key} href="#" className="dropdown-option">
+                    //     {option}
+                    // </a>
+                    <ButtonNav texto={option} key={key} className="dropdown-option"/>
+                    
                 ))}
             </div>
         </>
