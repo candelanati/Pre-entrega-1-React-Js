@@ -14,6 +14,11 @@ function App() {
       <NavBar/>
       <Logo/>
       <CardPoster/>
+      <div className='div-button-order'>
+        <button className='button-order'>
+          order
+        </button>
+      </div>
       {/* <CardsGrid/>
       <Footer/> */}
     </main>
