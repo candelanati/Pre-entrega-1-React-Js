@@ -5,6 +5,7 @@ import './App.css'
 import NavBar from './components/NavBar/NavBar'
 import Logo from './components/Logo/Logo'
 import CardPoster from './components/CardPoster/CardPoster'
+import Button from './components/Button/Button'
 
 function App() {
   // const [count, setCount] = useState(0)
@@ -15,12 +16,8 @@ function App() {
       <Logo/>
       <CardPoster/>
       <div className='div-button-order'>
-        <button className='button-order'>
-          order
-        </button>
-      </div>
-      {/* <CardsGrid/>
-      <Footer/> */}
+          <Button text="order" />
+        </div>
     </main>
   )
 }
