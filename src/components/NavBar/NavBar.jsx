@@ -25,8 +25,14 @@ function NavBar() {
     )
 }
 
+function AgregaATicket (){
+    console.log("click en un boton: ")
+
+}
+
 function Dropdown({ children, options = [] }) {
     const [open, setOpen] = useState(false);
+    
 
     return (
         <>
@@ -35,11 +41,7 @@ function Dropdown({ children, options = [] }) {
             </button>
             <div className={`dropdown ${open ? 'mostrar' : 'esconder'}`}>
                 {options.map((option, key) => (
-                    // <a key={key} href="#" className="dropdown-option">
-                    //     {option}
-                    // </a>
-                    <ButtonNav texto={option} key={key} className="dropdown-option"/>
-                    
+                    <ButtonNav onClick={AgregaATicket} texto={option} key={key} className="dropdown-option"/>
                 ))}
             </div>
         </>

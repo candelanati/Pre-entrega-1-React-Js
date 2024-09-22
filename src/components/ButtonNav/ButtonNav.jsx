@@ -2,7 +2,7 @@
 
  const ButtonNav = (props) =>{
     return(
-        <button className={props.className}>{props.texto}</button>
+        <button onClick={props.onClick} className={props.className}>{props.texto}</button>
     )
 }
 
