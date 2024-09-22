@@ -1,38 +1,52 @@
-import { children, useState } from 'react'
-import './NavBar.css'
-import Ticket  from '../Ticket/Ticket';
+import React, { useState } from 'react';
+import './NavBar.css';
+import Ticket from '../Ticket/Ticket';
 import ButtonNav from '../ButtonNav/ButtonNav';
 
 function NavBar() {
+    const [Opciones, setOpciones] = useState({
+        color: "---",
+        tamanio: "---",
+        presentacion: "---"
+    });
+
+    function HandleClick(option) {
+        console.log("click en un boton: " + option);
+
+        if (option === "claro" || option === "oscuro") {
+            setOpciones(prevState => ({ ...prevState, color: option }));
+        }
+        if (option === "a3" || option === "a4") {
+            setOpciones(prevState => ({ ...prevState, tamanio: option }));
+        }
+        if (option === "poster" || option === "cuadro") {
+            setOpciones(prevState => ({ ...prevState, presentacion: option }));
+        }
+        console.log(Opciones.color + " dentro de HandleClick");
+    }
+
     return (
         <nav>
             <ul className="navClass">
-                <li> 
-                    <Dropdown options={['claro','oscuro']}>color</Dropdown>
+                <li>
+                    <Dropdown options={['claro', 'oscuro']} HandleClick={HandleClick}>color</Dropdown>
                 </li>
-                <li> 
-                    <Dropdown options={['a3','a4']}>tamaño</Dropdown>
+                <li>
+                    <Dropdown options={['a3', 'a4']} HandleClick={HandleClick}>tamaño</Dropdown>
                 </li>
-                <li> 
-                    <Dropdown options={['poster','cuadro']}>presentación</Dropdown>
+                <li>
+                    <Dropdown options={['poster', 'cuadro']} HandleClick={HandleClick}>presentación</Dropdown>
                 </li>
             </ul>
             <div>
-                <Ticket/>
+                <Ticket opciones={Opciones} />
             </div>
-
         </nav>
-    )
+    );
 }
 
-function AgregaATicket (){
-    console.log("click en un boton: ")
-
-}
-
-function Dropdown({ children, options = [] }) {
+function Dropdown({ children, options = [], HandleClick }) {
     const [open, setOpen] = useState(false);
-    
 
     return (
         <>
@@ -41,7 +55,7 @@ function Dropdown({ children, options = [] }) {
             </button>
             <div className={`dropdown ${open ? 'mostrar' : 'esconder'}`}>
                 {options.map((option, key) => (
-                    <ButtonNav onClick={AgregaATicket} texto={option} key={key} className="dropdown-option"/>
+                    <ButtonNav onClick={() => HandleClick(option)} texto={option} key={key} className="dropdown-option" />
                 ))}
             </div>
         </>
