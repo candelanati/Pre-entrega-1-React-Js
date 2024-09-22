@@ -1,0 +1,15 @@
+.foto-logo{
+    width: 275px;
+}
+.div-logo{
+    position: absolute;
+    top: 0px;
+    margin-left: 50px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.div-logo > p{
+    font-size: small;
+}
