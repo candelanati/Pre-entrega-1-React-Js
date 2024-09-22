@@ -1,0 +1,13 @@
+
+.div-card{
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    margin-top: 150px;
+    gap: 20px;
+}
+.div-card-poster > img{
+    width: 350px;
+    border: 20px solid;
+    border-color: rgba(0, 0, 0, 0.568);
+}

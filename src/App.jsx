@@ -4,6 +4,7 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import NavBar from './components/NavBar/NavBar'
 import Logo from './components/Logo/Logo'
+import CardPoster from './components/CardPoster/CardPoster'
 
 function App() {
   // const [count, setCount] = useState(0)
@@ -12,6 +13,7 @@ function App() {
     <main>
       <NavBar/>
       <Logo/>
+      <CardPoster/>
       {/* <CardsGrid/>
       <Footer/> */}
     </main>

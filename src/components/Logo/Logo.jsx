@@ -1,4 +1,4 @@
-import { Children, useState } from 'react'
+
 import './Logo.css'
 
 function Logo(){
@@ -8,7 +8,6 @@ function Logo(){
                 <p>PortTreart Visualizer</p>
                 <img  src=" ../../../public/img/logos-16.png" alt="" className='foto-logo'/>
             </div>
-            
         </>
     )
 }
