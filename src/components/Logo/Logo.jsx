@@ -6,7 +6,10 @@ function Logo(){
         <>
             <div className='div-logo'>
                 <p>PortTreart Visualizer</p>
-                <img  src=" ../../../public/img/logos-16.png" alt="" className='foto-logo'/>
+                <a href="https://porttreat.com/" target='_blank'>
+                    <img  src=" ../../../public/img/logos-16.png" alt="" className='foto-logo'/>
+                </a>
+                
             </div>
         </>
     )
