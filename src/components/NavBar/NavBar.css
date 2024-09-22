@@ -11,7 +11,7 @@ ul{
 
 .navClass{
     display: flex;
-    gap: 100px;
+    gap: 80px;
     justify-content: center;
 }
 
@@ -23,7 +23,9 @@ ul{
     display: flex;
 }
 
-
+.nav-button{
+    padding-inline: 15px;
+}
 .nav-button:hover{
     text-decoration: underline 1px;
     text-underline-offset: 4px;
@@ -35,6 +37,7 @@ ul{
 }
 .nav-button > a{
     display: block;
+
 }
 
 
@@ -46,6 +49,7 @@ ul{
     padding: .5rem;
     margin-top: 3px;
 }
+
 .dropdown > a:hover{
     text-decoration: underline 1px;
     text-underline-offset: 4px;
